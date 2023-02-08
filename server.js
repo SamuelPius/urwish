@@ -53,7 +53,11 @@ app.post("/user-registration", (req, res) => {
         res.status(500).json({ message: "Failed to register user" });
       });
   });
-  
+
+  app.get("/", (req, res) => {
+    res.send("Welcome to the User Registration Page");
+  });
+
 app.listen(3000, () => {
   console.log("Server started at port 3000");
 });
